@@ -17,7 +17,7 @@ import { CopyShortUrlButtonContainer } from '@/bublik/features/copy-url';
 import { useTabTitleWithPrefix } from '@/bublik/features/projects';
 
 export const DashboardPageV2 = () => {
-	useTabTitleWithPrefix('Dashboard - Bublik');
+	useTabTitleWithPrefix('Dashboard');
 	const [searchParams] = useSearchParams();
 
 	const search = Object.fromEntries(searchParams.entries());

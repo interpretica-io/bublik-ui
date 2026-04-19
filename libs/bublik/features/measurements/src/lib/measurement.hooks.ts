@@ -16,5 +16,5 @@ export const useMeasurementTitle = ({
 }: useMeasurementTitleConfig) => {
 	const formattedTime = start ? formatTimeToDot(start) : '';
 
-	useTabTitleWithPrefix([name, formattedTime, runId, 'Measurements - Bublik']);
+	useTabTitleWithPrefix([name, formattedTime, runId, 'Measurements']);
 };

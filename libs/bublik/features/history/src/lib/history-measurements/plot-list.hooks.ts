@@ -45,7 +45,7 @@ function useGetHistoryMeasurementsByResult() {
 					title: 'Result ids limit',
 					description:
 						"Number of result ID's is larger than limit. Please be more specific with your search query"
-			  })
+				})
 			: chartsError || linearError;
 
 	return { data, isLoading, isError, resultIds, isFetching, error } as const;
@@ -83,7 +83,7 @@ function useGetHistoryMeasurements() {
 					title: 'Result ids limit',
 					description:
 						"Number of result ID's is larger than limit. Please be more specific with your search query"
-			  })
+				})
 			: chartsError || linearError;
 
 	return { data, isLoading, isError, resultIds, isFetching, error } as const;
@@ -94,7 +94,7 @@ function useCombinedView() {
 }
 
 function useHistoryMeasurementsTitle(testName?: string) {
-	useTabTitleWithPrefix([testName, 'Measurements - History - Bublik']);
+	useTabTitleWithPrefix([testName, 'Measurements - History']);
 }
 
 export {

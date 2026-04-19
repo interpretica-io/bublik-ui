@@ -36,7 +36,8 @@ const VersionSummary = z.object({
 });
 
 const ServerFeaturesSchema = z.object({
-	analytics_enabled: z.boolean()
+	analytics_enabled: z.boolean(),
+	site_name: z.string().optional().nullable()
 });
 
 export type VersionSummary = z.infer<typeof VersionSummary>;

@@ -9,7 +9,7 @@ import { Spinner } from '@/shared/tailwind-ui';
 import { AdminAnalyticsPageComponent } from './admin-analytics-page.component';
 
 function AdminAnalyticsPageContainer() {
-	useTabTitleWithPrefix('Analytics - Bublik');
+	useTabTitleWithPrefix('Analytics');
 
 	const { isAdmin } = useAuth();
 	const { data: features, isLoading: isFeatureLoading } =

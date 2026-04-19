@@ -65,12 +65,12 @@ interface UseRunReportPageNameConfig {
 function useRunReportPageName({ runId }: UseRunReportPageNameConfig) {
 	const { data: details } = useGetRunDetailsQuery(runId ?? skipToken);
 
-	let title = 'Report - Bublik';
+	let title = 'Report';
 
 	if (runId && details) {
 		const { main_package: name, start } = details;
 		const formattedTime = formatTimeToDot(start);
-		title = `${name} | ${formattedTime} | ${runId} | Report - Bublik`;
+		title = `${name} | ${formattedTime} | ${runId} | Report`;
 	}
 
 	useTabTitleWithPrefix(title);

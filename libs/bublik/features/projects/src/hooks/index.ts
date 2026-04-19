@@ -58,8 +58,8 @@ function useNavigateWithProject() {
 			typeof to === 'string'
 				? new URLSearchParams(parsePath(to).search ?? '')
 				: typeof to.search === 'string'
-				? new URLSearchParams(to.search)
-				: new URLSearchParams();
+					? new URLSearchParams(to.search)
+					: new URLSearchParams();
 		const hideSidebar = currentSearchParams.get(HIDE_SIDEBAR_QUERY_KEY);
 
 		params.delete(PROJECT_KEY);
@@ -94,14 +94,18 @@ function useTabTitleWithPrefix(title: string | (string | undefined)[]) {
 		{ projects: projectIds },
 		{ refetchOnMountOrArgChange: true }
 	);
+	const { data: features } = bublikAPI.useGetServerFeaturesQuery();
+	const siteName = features?.site_name ?? 'Bublik';
+
 	useEffect(() => {
 		const titleParts = [
 			prefix,
-			...(Array.isArray(title) ? title.filter(Boolean) : [title])
+			...(Array.isArray(title) ? title.filter(Boolean) : [title]),
+			siteName
 		].filter(Boolean);
 
 		document.title = titleParts.join(' - ');
-	}, [prefix, title]);
+	}, [prefix, title, siteName]);
 }
 
 interface UseProjectParams {

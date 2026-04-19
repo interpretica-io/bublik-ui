@@ -20,16 +20,16 @@ function useRunsPageTitle() {
 	const searchDuration = searchParams.get('duration') ?? '';
 	const calendarMode = searchParams.get('calendarMode') ?? '';
 
-	let title = 'Runs - Bublik';
+	let title = 'Runs';
 
 	if (startDate || endDate || searchDuration) {
 		if (calendarMode === 'default') {
 			const start = formatTimeToDot(startDate);
 			const end = formatTimeToDot(endDate);
-			title = `${start} - ${end} | Runs - Bublik`;
+			title = `${start} - ${end} | Runs`;
 		} else if (calendarMode === 'duration') {
 			const duration = parseISODuration(searchDuration);
-			title = `${formatDuration(duration)} | Runs - Bublik`;
+			title = `${formatDuration(duration)} | Runs`;
 		}
 	}
 

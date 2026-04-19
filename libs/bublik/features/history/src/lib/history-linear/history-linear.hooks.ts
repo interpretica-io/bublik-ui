@@ -45,5 +45,5 @@ export const useHistoryLinearGlobalFilter = () => {
 };
 
 export const useHistoryLinearTitle = (config: { testName?: string }) => {
-	useTabTitleWithPrefix([config?.testName, 'Linear - History - Bublik']);
+	useTabTitleWithPrefix([config?.testName, 'Linear - History']);
 };

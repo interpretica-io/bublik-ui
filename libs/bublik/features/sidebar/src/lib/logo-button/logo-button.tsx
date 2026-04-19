@@ -2,9 +2,12 @@
 /* SPDX-FileCopyrightText: 2021-2023 OKTET Labs Ltd. */
 import { useSidebar, Tooltip, Icon, cn } from '@/shared/tailwind-ui';
 import { LinkWithProject } from '@/bublik/features/projects';
+import { bublikAPI } from '@/services/bublik-api';
 
 export const SidebarLogoButton = () => {
 	const { isSidebarOpen, toggleSidebar } = useSidebar();
+	const { data: features } = bublikAPI.useGetServerFeaturesQuery();
+	const siteName = features?.site_name ?? 'Bublik';
 
 	return (
 		<Tooltip content="To toggle sidebar press `S`" side="right" sideOffset={15}>
@@ -29,7 +32,7 @@ export const SidebarLogoButton = () => {
 					className="text-[1.375rem] font-bold ml-0.5 flex items-center rounded-[0.625rem] hover:bg-primary-wash transition-all px-1"
 					to="/dashboard"
 				>
-					<span className="text-[1.375rem] leading-[0.75rem]">Bublik</span>
+					<span className="text-[1.375rem] leading-[0.75rem]">{siteName}</span>
 				</LinkWithProject>
 			</div>
 		</Tooltip>

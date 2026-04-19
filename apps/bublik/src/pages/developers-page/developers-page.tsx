@@ -7,7 +7,7 @@ import { IframeToOldBublik } from '@/shared/tailwind-ui';
 import { useTabTitleWithPrefix } from '@/bublik/features/projects';
 
 export const FlowerFeature = () => {
-	useTabTitleWithPrefix('Flower - Bublik');
+	useTabTitleWithPrefix('Flower');
 
 	return (
 		<IframeToOldBublik
@@ -19,7 +19,7 @@ export const FlowerFeature = () => {
 };
 
 export const DevelopersLayout = () => {
-	useTabTitleWithPrefix('Dev - Bublik');
+	useTabTitleWithPrefix('Dev');
 
 	return <Outlet />;
 };

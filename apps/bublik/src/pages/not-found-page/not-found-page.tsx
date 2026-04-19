@@ -5,7 +5,7 @@ import { NotFound } from '@/shared/tailwind-ui';
 import { useTabTitleWithPrefix } from '@/bublik/features/projects';
 
 export const NoMatchFeature = () => {
-	useTabTitleWithPrefix('Not Found - Bublik');
+	useTabTitleWithPrefix('Not Found');
 
 	return <NotFound />;
 };

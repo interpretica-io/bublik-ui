@@ -8,7 +8,7 @@ import {
 } from '@/bublik/features/run-import';
 
 export const ImportPage = () => {
-	useTabTitleWithPrefix('Import - Bublik');
+	useTabTitleWithPrefix('Import');
 
 	return (
 		<div className="p-2 overflow-hidden h-full">

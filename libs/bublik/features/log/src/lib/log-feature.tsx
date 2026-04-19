@@ -45,7 +45,7 @@ function useLogTitle() {
 		details?.main_package,
 		formattedTime,
 		runId,
-		'Log - Bublik'
+		'Log'
 	]);
 }
 

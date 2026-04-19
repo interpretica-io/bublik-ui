@@ -174,7 +174,7 @@ export const RunDiffPage = () => {
 	const leftRunId = searchParams.get('left');
 	const rightRunId = searchParams.get('right');
 
-	useTabTitleWithPrefix(`Diff - ${leftRunId} | ${rightRunId} - Bublik`);
+	useTabTitleWithPrefix(`Diff - ${leftRunId} | ${rightRunId}`);
 
 	if (!leftRunId || !rightRunId) {
 		return (

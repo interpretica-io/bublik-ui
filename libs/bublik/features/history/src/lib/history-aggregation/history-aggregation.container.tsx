@@ -24,7 +24,7 @@ export const HistoryAggregationContainer = () => {
 	const state = useLocation().state as { fromRun?: boolean };
 	const { query } = useHistoryQuery();
 
-	useTabTitleWithPrefix([query?.testName, 'Aggregation - History - Bublik']);
+	useTabTitleWithPrefix([query?.testName, 'Aggregation - History']);
 
 	const { data, isLoading, isFetching, error } = useGetHistoryAggregationQuery(
 		query,
